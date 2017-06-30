@@ -12,7 +12,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 use App\Model\Category;
-use App\Model\Comments;
+use App\Model\Comment;
 use App\Model\PostToBoard;
 
 class PostCommentSeeder extends Seeder
