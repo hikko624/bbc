@@ -1,4 +1,4 @@
-@extends(default)
+@extends('default')
 @session('content')
 <div class="col-xs-8 col-xs-offset-2">
 

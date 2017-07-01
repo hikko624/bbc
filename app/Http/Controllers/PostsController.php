@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Model\PostToBoard;
+use Illuminate\Support\Facades\View;
 
 class PostsController extends Controller
 {
@@ -15,7 +16,7 @@ class PostsController extends Controller
     public function index()
     {
         $posts = PostToBoard::all();
-        return View::make('bbc.index')->with('post_to_boards', $posts);
+        return View::make('index')->with('posts', $posts);
     }
 
     /**

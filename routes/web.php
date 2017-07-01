@@ -11,6 +11,4 @@
 |
 */
 
-Route::get('/', function () {
-    return view('default');
-});
+Route::get('/', 'PostsController@index');
