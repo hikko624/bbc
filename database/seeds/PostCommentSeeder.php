@@ -28,9 +28,9 @@ class PostCommentSeeder extends Seeder
             $post->cat_id = 1;
             $post->save();
 
-            $maxComments = mt_rand(3, 5);
+            $maxComments = mt_rand(3, 15);
 
-            for($j=0; $j <= 10; $j++) {
+            for($j=0; $j <= $maxComments; $j++) {
                 $comment = new Comment();
                 $comment->commenter = '名無しさん';
                 $comment->comment = $commentdummy;
@@ -39,6 +39,7 @@ class PostCommentSeeder extends Seeder
                 $post->increment('comment_count');
             }
         }
+
         $cat1 = new Category;
         $cat1->name = "電化製品";
         $cat1->save();
