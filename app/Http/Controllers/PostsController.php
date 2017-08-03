@@ -48,7 +48,8 @@ class PostsController extends Controller
      */
     public function show($id)
     {
-        //
+        $post = PostToBoard::find($id);
+        return View::make('single')->with('post', $post);
     }
 
     /**
